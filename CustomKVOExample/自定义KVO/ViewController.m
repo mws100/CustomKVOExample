@@ -9,9 +9,11 @@
 #import "ViewController.h"
 #import "Student.h"
 #import "NSObject+Extension.h"
+#import "NSObject+WSKVO.h"
 
 @interface ViewController ()
-@property (nonatomic, strong) Student *s;
+@property (nonatomic, strong) Student *s1;
+@property (nonatomic, strong) Student *s2;
 @end
 
 @implementation ViewController
@@ -20,19 +22,29 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor purpleColor];
     
-    _s = [[Student alloc] init];
+    _s1 = [[Student alloc] init];
+    _s2 = [[Student alloc] init];
+    
+    //block回调
+    [_s1 ws_observerkeyPath:@"score" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld block:^(NSDictionary * _Nonnull change) {
+        NSLog(@"old=%@ new=%@", change[NSKeyValueChangeOldKey], change[NSKeyValueChangeNewKey]);
+    }];
     
     //使用自定义方法实现kvo监听
-    [_s ws_addObserver:self forKeyPath:@"score" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+    [_s2 ws_addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+    
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
-    NSLog(@"old=%@ new=%@", change[NSKeyValueChangeOldKey], change[NSKeyValueChangeNewKey]);
+    NSLog(@"keyPath=%@ old=%@ new=%@", keyPath, change[NSKeyValueChangeOldKey], change[NSKeyValueChangeNewKey]);
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     static NSInteger num = 0;
-    _s.score = @(num++);
+    num++;
+    
+    _s1.score = @(num);
+    _s2.name = [NSString stringWithFormat:@"%zd", num];
 }
 
 @end

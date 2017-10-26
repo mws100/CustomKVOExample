@@ -12,4 +12,6 @@
 
 @property (nonatomic, strong) NSNumber *score;
 
+@property (nonatomic, copy) NSString *name;
+
 @end

@@ -15,6 +15,7 @@
 		C22AA5611F948444000389BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C22AA55F1F948444000389BC /* LaunchScreen.storyboard */; };
 		C22AA56D1F948512000389BC /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = C22AA56C1F948512000389BC /* Student.m */; };
 		C22AA5701F9486A7000389BC /* NSObject+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C22AA56F1F9486A7000389BC /* NSObject+Extension.m */; };
+		C27B76F01FA1DBB500B7E894 /* NSObject+WSKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = C27B76EF1FA1DBB500B7E894 /* NSObject+WSKVO.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		C22AA56C1F948512000389BC /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 		C22AA56E1F9486A7000389BC /* NSObject+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Extension.h"; sourceTree = "<group>"; };
 		C22AA56F1F9486A7000389BC /* NSObject+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Extension.m"; sourceTree = "<group>"; };
+		C27B76EE1FA1DBB500B7E894 /* NSObject+WSKVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+WSKVO.h"; sourceTree = "<group>"; };
+		C27B76EF1FA1DBB500B7E894 /* NSObject+WSKVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+WSKVO.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 				C22AA56C1F948512000389BC /* Student.m */,
 				C22AA56E1F9486A7000389BC /* NSObject+Extension.h */,
 				C22AA56F1F9486A7000389BC /* NSObject+Extension.m */,
+				C27B76EE1FA1DBB500B7E894 /* NSObject+WSKVO.h */,
+				C27B76EF1FA1DBB500B7E894 /* NSObject+WSKVO.m */,
 				C22AA55A1F948444000389BC /* Main.storyboard */,
 				C22AA55D1F948444000389BC /* Assets.xcassets */,
 				C22AA55F1F948444000389BC /* LaunchScreen.storyboard */,
@@ -120,6 +125,7 @@
 				TargetAttributes = {
 					C22AA54D1F948444000389BC = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = QXGTZKLSP7;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -162,6 +168,7 @@
 			files = (
 				C22AA5591F948444000389BC /* ViewController.m in Sources */,
 				C22AA5561F948444000389BC /* AppDelegate.m in Sources */,
+				C27B76F01FA1DBB500B7E894 /* NSObject+WSKVO.m in Sources */,
 				C22AA5701F9486A7000389BC /* NSObject+Extension.m in Sources */,
 				C22AA5531F948444000389BC /* main.m in Sources */,
 				C22AA56D1F948512000389BC /* Student.m in Sources */,
@@ -286,9 +293,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QXGTZKLSP7;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = "自定义KVO/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mawenshuai.www.---KVO";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -299,9 +307,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QXGTZKLSP7;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = "自定义KVO/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mawenshuai.www.---KVO";
 				PRODUCT_NAME = "$(TARGET_NAME)";
